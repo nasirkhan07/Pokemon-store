@@ -1,0 +1,25 @@
+.pok-list{
+    width: 90%;
+    left: 5%;
+    position: relative;
+    top: 60px;
+}p {
+    font-family: Lato;
+  }
+
+  .search-pok{
+    position: relative;
+    top: 45px;
+    /* width: 501px; */
+    left: 30%;
+
+
+  }
+
+  .input-search{
+      width: 40%;
+      height: 30px;
+  }
+  .paginator{
+    max-width: 76%;
+  }

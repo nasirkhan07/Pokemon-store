@@ -7,13 +7,13 @@ import { PokemonData, PokemonList } from './models/pokemonModels';
   providedIn: 'root'
 })
 export class PokemonService {
- private baseUrl:string="https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+ private baseUrl:string="https://pokeapi.co/api/v2/pokemon?";
   constructor(private http: HttpClient) { 
 
   }
 
-  GetPokemonList():Observable<PokemonList>{
-    return this.http.get<PokemonList>(this.baseUrl);
+  GetPokemonList(limit:number, offset:number):Observable<PokemonList>{
+    return this.http.get<PokemonList>(this.baseUrl+"limit="+limit+"&offset="+offset);
   }
 
   GetPokemon(pokemonUrl:string):Observable<PokemonData>{

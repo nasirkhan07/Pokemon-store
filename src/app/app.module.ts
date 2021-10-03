@@ -7,6 +7,14 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+
+
+
 import { PokemonService } from './pokemon.service';
 @NgModule({
   declarations: [
@@ -18,7 +26,7 @@ import { PokemonService } from './pokemon.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,    HttpClientModule,
-    MatCardModule,
+    MatCardModule,MatGridListModule,MatIconModule,MatFormFieldModule,MatPaginatorModule
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]
