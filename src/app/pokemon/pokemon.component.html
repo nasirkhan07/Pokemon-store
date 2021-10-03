@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>{{name}}</mat-card-title>
+    <mat-card-subtitle>{{pokemonData?.height}}</mat-card-subtitle>
+    <mat-card-subtitle>{{pokemonData?.weight}}</mat-card-subtitle>
+
+    <img mat-card-lg-image [src]="pokemonData?.sprites.other.dream_world.front_default" >
+  </mat-card-title-group>
+  <mat-card-content>
+ <div *ngIf="!!pokemonData?.abilities?.length" >
+   <div *ngFor="let ab of pokemonData?.abilities" >
+     <p>{{ab.ability.name}}</p>
+   </div>
+ </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,10 @@
+<div class="root-container">
+<div *ngIf="!!pokemonlist" >
+<div *ngFor="let pok of pokemonlist.results" >
+    <app-pokemon [name]="pok.name" [url]="pok.url">
+    </app-pokemon>
+
+</div>
+
+</div>
+</div>
