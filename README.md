@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 ## assignment progress
 
-I could not find enough time to complete all the acceptance criteria's(sort /refresh persist). I spent around 3 hrs in total.
+I could not find enough time to complete all the acceptance criteria's(sort /refresh persist) and write tests. I spent around 3 hrs in total.
 to build and run follow the abbove links/descriptions. 
 1. clone this codebase
 2. Navigate to src folder
