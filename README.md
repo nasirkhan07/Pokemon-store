@@ -29,3 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 I could not find enough time to complete all the acceptance criteria's(sort /refresh persist). I spent around 3 hrs in total.
 to build and run follow the abbove links/descriptions. 
+1. clone this codebase
+2. Navigate to src folder
+3. npm install @angular/cli -g
+4. npm install
+5. ng serve to run the application locally
