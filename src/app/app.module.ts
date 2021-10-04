@@ -11,7 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -26,7 +26,7 @@ import { PokemonService } from './pokemon.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,    HttpClientModule,
-    MatCardModule,MatGridListModule,MatIconModule,MatFormFieldModule,MatPaginatorModule
+    MatCardModule,MatGridListModule,MatIconModule,MatFormFieldModule,MatPaginatorModule,FlexLayoutModule
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]

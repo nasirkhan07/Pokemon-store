@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { PokemonList, PokemonMeta } from '../models/pokemonModels';
 import { PokemonService } from '../pokemon.service';
+import { PokemonComponent } from '../pokemon/pokemon.component';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -13,6 +14,7 @@ export class PokemonListComponent implements OnInit {
   pokemonlistMaster: PokemonList | null = null;
   defaultPageSize: number = 10;
   lastPageSize=10;
+  @ViewChildren(PokemonComponent) pokemons!: QueryList<PokemonComponent>;
   constructor(private pokemonService: PokemonService) { }
 
   async ngOnInit(): Promise<void> {
@@ -21,8 +23,22 @@ export class PokemonListComponent implements OnInit {
     console.dir(this.pokemonlist);
   }
 
-  searchPokmon(value: string) {
+  async searchPokmon(value: string) {
     console.log(value);
+    if(value.trim()==""){
+      await this.ngOnInit();
+      return;
+
+    }
+    if(this.pokemonlistMaster!=null){
+    this.pokemonlistMaster = await this.pokemonService.GetPokemonList(this.pokemonlistMaster.count,0).toPromise();
+    var filterd=this.pokemons.filter(x=>(x.name!=null && x.name.includes(value))
+    || x.pokemonData.abilities.some((c:any)=>c.ability.name.includes(value))).map(r=>r.name);
+    this.pokemonlist = this.pokemonlistMaster.results.filter(d=>filterd.includes(d.name));
+
+
+    }
+
   }
   async paginate(event: PageEvent) {
     console.log(event);

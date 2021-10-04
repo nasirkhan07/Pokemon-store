@@ -23,3 +23,15 @@
   .paginator{
     max-width: 76%;
   }
+  .container {
+    padding: 10px;
+  }
+  
+  .mr-10 {
+    margin-right: 10px;
+  }
+  
+  .ml-10 {
+    margin-left: 10px;
+  }
+  

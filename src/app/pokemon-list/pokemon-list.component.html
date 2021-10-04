@@ -7,17 +7,27 @@
     </mat-paginator>
 
     <div class="search-pok">
-            <input class="input-search" #f placeholder="Search a pokemon" matInput  (keyup.enter)="searchPokmon(f.value)" >
+            <input class="input-search" #f placeholder="Search a pokemon" matInput  
+            (keyup.enter)="searchPokmon(f.value)" >
     </div>
 
 </div>
 <div class="pok-list" *ngIf="!!pokemonlist" >
-        <mat-grid-list cols="4"  >
+        <!-- <mat-grid-list cols="4"  >
             <mat-grid-tile *ngFor="let pok of pokemonlist" >  
                  <app-pokemon [name]="pok.name" [url]="pok.url">
             </app-pokemon></mat-grid-tile>
             
-    </mat-grid-list>
+    </mat-grid-list> -->
+    <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+        <!-- <div fxFlex *ngFor="let pok of pokemonlist"> -->
+          <!-- <div class="grid-item" fxLayout="row" fxLayoutAlign="center center">
+            {{ 'Item ' + i }}
+          </div> -->
+          <app-pokemon *ngFor="let pok of pokemonlist" [name]="pok.name" [url]="pok.url"> </app-pokemon>
+        <!-- </div> -->
+      </div>
+</div>
+</div>
 
-</div>
-</div>
+  

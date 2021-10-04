@@ -2,4 +2,33 @@
     max-width: 400px;
     margin-bottom: 8px;
   }
+  .imgpar{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .imgpar img {
+    width: 100%;
+}
+img{
+    max-width: 150px;
+    max-height: 150px;
+}
+.imgpar p {
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+}
+mat-card {
+    margin-bottom: 16px;
+}
+.grid-item {
+    background-color: rgba(122, 175, 255, 0.253);
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 300px;
+    height: 100px;
+    margin: 5px;
+  }mat-card {
+    margin-bottom: 10px;
+  }
   
